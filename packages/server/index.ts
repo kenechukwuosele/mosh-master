@@ -9,7 +9,7 @@ dotenv.config();
 
 const client = new OpenAI({
 	baseURL: "https://router.huggingface.co/v1",
-	apiKey: process.env.HF_TOKEN,
+	apiKey: process.env.OPENAI_API_KEY,
 });
 
 
@@ -46,7 +46,7 @@ app.post('/api/chat', async (req: Request, res: Response) => {
         content: prompt,
         },
       ],  
-      // provider: "auto"
+    
     })
     
     res.json(chatCompletion.choices[0]?.message);
