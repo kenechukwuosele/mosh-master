@@ -21,7 +21,7 @@ app.get('/api/hello', (req: Request, res: Response) => {
   res.json({ message: 'Hello, World!' });
 });
 
-const conversations = new Map<string, string[]>();
+const conversations = new Map<string, string[]>(); 
 
 app.post('/api/chat', async (req: Request, res: Response) => {
   try {
